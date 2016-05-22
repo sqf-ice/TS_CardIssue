@@ -1,0 +1,421 @@
+<INFO>
+    <SETTING>
+    	<!-- 项目信息Name：项目名称 Desc：描述(配置文件不涉及该项配置) Author：作者	Modify：修改备注信息	Date：修改日期	Ver：版本 -->
+        <PROJ Name="肇庆市发卡项目" Desc="" Author="张柳" Modify="" Date="2014-01-24" Ver="V0.1.1.10">
+            <MOD Author="YY" Modify="攀枝花" Date="2014-01-24" Ver="V0.1.1.10" />
+        </PROJ>
+        <!-- Value:个人识别码	Count:错误计数 -->
+        <PIN Value="123456" Count="66" />
+        <!-- Value：城市代码		province：省		city：市 -->
+        <CITYCODE Value="445300" />
+        <!-- Value：装载密钥的方式 1：加密机装载 2：固定密钥装载 -->
+        <LOADKEYMODE Value="1" />
+        <!-- Value:装载密钥类型 0：密文	1：明文	10：密文更新	11：明文更新 -->
+        <STORGEMODE Value="1" />
+        <!-- 加密机配置	 Scale：级别	2：全省通集中模式	1：地级市集中模式-->
+        <ENCRYPTDEV Scale="1">
+            <!-- PKeyNo：保护密钥ID		PKeyfsjs：保护密钥（次主密钥）分散级数		PKeyfsyz：保护密钥（次主密钥）分散因子		PKeyLen：保护密钥（次主密钥）的长度(十六进制单位字节) -->
+            <LOADSET PKeyNo="1" PKeyfsjs="0" PKeyfsyz="" PKeyLen="1" />
+        </ENCRYPTDEV>
+    </SETTING>
+    <SSSEKEYS><!--社保的密钥-->
+    		<!--标签名是父目录 Name:密钥名称	KeyIndex：密钥标识		Ver：密钥版本开始版本号	 	PSAMKeyType：psam卡密钥用途		PSAMKeyID：psam卡密钥标识	
+        		Addr：加密机中存储密钥的地址		Type：密钥类型		Len：密钥长度(十六进制单位字节)		Group：密钥组数(与Addr组数一一对应)		Count：错误计数		Value：密钥值	-->
+        <SSSE Name="IRK" KeyIndex="00" Ver="01" PSAMKeyType="67" PSAMKeyID="08" Addr="170|171|172|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <SSSE Name="PUK" KeyIndex="06" Ver="00" PSAMKeyType="28" PSAMKeyID="10" Addr="100|" Type="08" Len="16" Group="01|" Count="FF" Value="11111111111111111111111111111111" />
+        <SSSE Name="STK" KeyIndex="02" Ver="00" PSAMKeyType="28" PSAMKeyID="09" Addr="173|" Type="08" Len="08" Group="01|" Count="FF" Value="1111111111111111" />
+        <SSSE Name="BK" KeyIndex="05" Ver="00" PSAMKeyType="28" PSAMKeyID="11" Addr="101|" Type="08" Len="16" Group="01|" Count="FF" Value="11111111111111111111111111111111" />
+        <SSSE Name="UKMF" KeyIndex="04" Ver="01" PSAMKeyType="28" PSAMKeyID="12" Addr="104|105|106|" Type="08" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <SSSE Name="RKSSSE" KeyIndex="0A" Ver="01" PSAMKeyType="67" PSAMKeyID="0A" Addr="4C|4D|4E|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF01 Name="STKDF01" KeyIndex="82" Ver="00" PSAMKeyType="28" PSAMKeyID="20" Addr="174|" Type="08" Len="08" Group="01|" Count="FF" Value="1111111111111111" />
+        <DF01 Name="UK1DF01" KeyIndex="83" Ver="01" PSAMKeyType="28" PSAMKeyID="42" Addr="107|108|109|" Type="08" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF01 Name="UK4DF01" KeyIndex="86" Ver="01" PSAMKeyType="27" PSAMKeyID="25" Addr="179|17A|17B|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF01 Name="UK2DF01" KeyIndex="84" Ver="01" PSAMKeyType="28" PSAMKeyID="43" Addr="10A|10B|10C|" Type="08" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF01 Name="UK3DF01" KeyIndex="85" Ver="01" PSAMKeyType="27" PSAMKeyID="24" Addr="176|177|178|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF01 Name="UK5DF01" KeyIndex="87" Ver="01" PSAMKeyType="28" PSAMKeyID="44" Addr="10D|10E|10F|" Type="08" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF01 Name="UK6DF01" KeyIndex="89" Ver="01" PSAMKeyType="27" PSAMKeyID="2F" Addr="52|53|54|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF01 Name="UK7DF01" KeyIndex="8A" Ver="01" PSAMKeyType="27" PSAMKeyID="30" Addr="55|56|57|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF01 Name="UK8DF01" KeyIndex="8B" Ver="01" PSAMKeyType="27" PSAMKeyID="31" Addr="58|59|5A|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF01 Name="UK9DF01" KeyIndex="8C" Ver="01" PSAMKeyType="27" PSAMKeyID="32" Addr="5B|5C|5D|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF01 Name="UKADF01" KeyIndex="8D" Ver="01" PSAMKeyType="27" PSAMKeyID="33" Addr="5E|5F|60|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF01 Name="UKBDF01" KeyIndex="8E" Ver="01" PSAMKeyType="27" PSAMKeyID="34" Addr="61|62|63|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF01 Name="RK1DF01" KeyIndex="88" Ver="01" PSAMKeyType="67" PSAMKeyID="2E" Addr="4F|50|51|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF02 Name="STKDF02" KeyIndex="82" Ver="00" PSAMKeyType="28" PSAMKeyID="21" Addr="185|" Type="08" Len="08" Group="01|" Count="FF" Value="1111111111111111" />
+        <DF02 Name="UK1DF02" KeyIndex="83" Ver="01" PSAMKeyType="27" PSAMKeyID="26" Addr="187|188|189|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF02 Name="UK2DF02" KeyIndex="84" Ver="01" PSAMKeyType="28" PSAMKeyID="45" Addr="110|111|112|" Type="08" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF02 Name="UK3DF02" KeyIndex="85" Ver="01" PSAMKeyType="28" PSAMKeyID="46" Addr="113|114|115|" Type="08" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF02 Name="UK4DF02" KeyIndex="86" Ver="01" PSAMKeyType="27" PSAMKeyID="27" Addr="18A|18B|18C|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF02 Name="UK5DF02" KeyIndex="87" Ver="01" PSAMKeyType="27" PSAMKeyID="28" Addr="18D|18E|18F|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF02 Name="UK6DF02" KeyIndex="89" Ver="01" PSAMKeyType="27" PSAMKeyID="36" Addr="67|68|69|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF02 Name="RK1DF02" KeyIndex="88" Ver="01" PSAMKeyType="67" PSAMKeyID="35" Addr="64|65|66|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF03 Name="STKDF03" KeyIndex="82" Ver="00" PSAMKeyType="28" PSAMKeyID="22" Addr="186|" Type="08" Len="08" Group="01|" Count="FF" Value="1111111111111111" />
+        <DF03 Name="LKDF03" KeyIndex="83" Ver="00" PSAMKeyType="28" PSAMKeyID="40" Addr="102|" Type="08" Len="16" Group="01|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF03 Name="UK1DF03" KeyIndex="86" Ver="01" PSAMKeyType="28" PSAMKeyID="47" Addr="116|117|118|" Type="08" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF03 Name="UK3DF03" KeyIndex="88" Ver="01" PSAMKeyType="28" PSAMKeyID="48" Addr="119|11A|11B|" Type="08" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF03 Name="UK4DF03" KeyIndex="89" Ver="01" PSAMKeyType="27" PSAMKeyID="37" Addr="6A|6B|6C|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF03 Name="UK5DF03" KeyIndex="8A" Ver="01" PSAMKeyType="27" PSAMKeyID="38" Addr="6D|6E|6F|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF03 Name="UK6DF03" KeyIndex="8B" Ver="01" PSAMKeyType="27" PSAMKeyID="39" Addr="70|71|72|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF03 Name="UK7DF03" KeyIndex="8C" Ver="01" PSAMKeyType="27" PSAMKeyID="3A" Addr="73|74|75|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF03 Name="UK8DF03" KeyIndex="8D" Ver="01" PSAMKeyType="27" PSAMKeyID="3B" Addr="76|77|78|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF03 Name="UK2DF03" KeyIndex="87" Ver="01" PSAMKeyType="27" PSAMKeyID="29" Addr="190|191|192|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF03 Name="RK2DF03" KeyIndex="85" Ver="01" PSAMKeyType="67" PSAMKeyID="2C" Addr="196|197|198|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF03 Name="RK1DF03" KeyIndex="84" Ver="01" PSAMKeyType="67" PSAMKeyID="2B" Addr="193|194|195|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF04 Name="STKDF04" KeyIndex="82" Ver="00" PSAMKeyType="28" PSAMKeyID="23" Addr="175|" Type="08" Len="08" Group="01|" Count="FF" Value="1111111111111111" />
+        <DF04 Name="LKDF04" KeyIndex="83" Ver="00" PSAMKeyType="28" PSAMKeyID="41" Addr="103|" Type="08" Len="16" Group="01|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF04 Name="UK1DF04" KeyIndex="85" Ver="01" PSAMKeyType="28" PSAMKeyID="49" Addr="11C|11D|11E|" Type="08" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF04 Name="UK2DF04" KeyIndex="86" Ver="01" PSAMKeyType="27" PSAMKeyID="2A" Addr="17C|17D|17E|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF04 Name="RK1DF04" KeyIndex="84" Ver="01" PSAMKeyType="67" PSAMKeyID="2D" Addr="182|183|184|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF04 Name="DSK" KeyIndex="87" Ver="01" PSAMKeyType="28" PSAMKeyID="4A" Addr="11F|120|121|" Type="08" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF04 Name="DLK" KeyIndex="01|02|03|" Ver="01" PSAMKeyType="-" PSAMKeyID="-" Addr="122|123|124|" Type="09" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF04 Name="DPK" KeyIndex="01|02|03|" Ver="01" PSAMKeyType="42" PSAMKeyID="01|02|03|" Addr="17F|180|181|" Type="02" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF04 Name="DTK" KeyIndex="00" Ver="01" PSAMKeyType="-" PSAMKeyID="-" Addr="125|126|127|" Type="0C" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF07 Name="STKDF07" KeyIndex="82" Ver="00" PSAMKeyType="28" PSAMKeyID="3C" Addr="79|" Type="08" Len="08" Group="01|" Count="FF" Value="1111111111111111" />
+        <DF07 Name="UK1DF07" KeyIndex="86" Ver="01" PSAMKeyType="27" PSAMKeyID="3E" Addr="7D|7E|7F|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF07 Name="UK2DF07" KeyIndex="87" Ver="01" PSAMKeyType="27" PSAMKeyID="B0" Addr="83|84|85|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF07 Name="UK3DF07" KeyIndex="88" Ver="01" PSAMKeyType="27" PSAMKeyID="B2" Addr="89|8A|8B|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF07 Name="RK1DF07" KeyIndex="83" Ver="01" PSAMKeyType="67" PSAMKeyID="3D" Addr="7A|7B|7C|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF07 Name="RK2DF07" KeyIndex="84" Ver="01" PSAMKeyType="67" PSAMKeyID="3F" Addr="80|81|82|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF07 Name="RK3DF07" KeyIndex="85" Ver="01" PSAMKeyType="67" PSAMKeyID="B1" Addr="86|87|88|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF05 Name="STKDF05" KeyIndex="82" Ver="00" PSAMKeyType="28" PSAMKeyID="B3" Addr="8C|" Type="08" Len="08" Group="01|" Count="FF" Value="1111111111111111" />
+        <DF05 Name="UK1DF05" KeyIndex="83" Ver="01" PSAMKeyType="27" PSAMKeyID="B4" Addr="8D|8E|8F|" Type="07" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF06 Name="STKDF06" KeyIndex="82" Ver="00" PSAMKeyType="28" PSAMKeyID="84" Addr="139|" Type="08" Len="08" Group="01|" Count="FF" Value="1111111111111111" />
+        <!--DF06 Name="LKDF06" KeyIndex="83" Ver="00" PSAMKeyType="" PSAMKeyID="83" Addr="138|" Type="08" Len="16" Group="01|" Count="FF" Value="11111111111111111111111111111111" /-->
+        <DF06 Name="UK1DF06" KeyIndex="84" Ver="01" PSAMKeyType="28" PSAMKeyID="19" Addr="12F|130|131|" Type="08" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF06 Name="UK2DF06" KeyIndex="85" Ver="01" PSAMKeyType="28" PSAMKeyID="1A" Addr="132|133|134|" Type="08" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+        <DF06 Name="RK1DF06" KeyIndex="83" Ver="01" PSAMKeyType="48" PSAMKeyID="82" Addr="135|136|137|" Type="08" Len="16" Group="01|02|03|" Count="FF" Value="11111111111111111111111111111111" />
+    </SSSEKEYS>
+    <!-- MF根目录 MKvalue：主控密钥值		Count：错误计数		FID：文件标识符		AID：应用标识符 -->
+    <MF MKvalue="11111111111111111111111111111111" Count="66" FID="3F00" AID="A0000000030000">
+        <!--  MKvalue：主控密钥值		Count：错误计数		Space：空间		UpdateMode1：工作密钥更新使用主控（0：当前MK	1：父目录MK）
+    					UpdateMode2：当前MK更新使用主控（0：当前MK	1：父目录MK）		FID：文件标识符		AID：应用标识符 -->		 
+        <SSSE MKvalue="11111111111111111111111111111111" Count="66" Space="" UpdateMode1="0" UpdateMode2="0" FID="DDF1" AID="7378312E73682EC9E7BBE1B1A3D5CF">
+            <DF00>
+            		<!-- SFI：短文件标识符		ReadControl：读控制（取值：空、PIN、KEY（如RKSSSE）、PIN|KEY、PIN+KEY、禁止（FF））	WriteControl：写控制	EFType:（1：定长文件	
+            				 2：变长文件	 3：透明文件	4：循环文件	5：内部文件）		bInit：是否初始化（0：否	1：是）		nCount：循环文件记录数		ResSpace：预留空间	-->
+                <EF SFI="EF05" ReadControl="" WriteControl="UKMF" EFType="2" bInit="1" nCount="0" ResSpace="" />
+                <EF SFI="EF06" ReadControl="" WriteControl="UKMF" EFType="2" bInit="1" nCount="0" ResSpace="" />
+                <EF SFI="EF07" ReadControl="RKSSSE" WriteControl="UKMF" EFType="3" bInit="0" nCount="0" ResSpace="" />
+                <EF SFI="EF08" ReadControl="RKSSSE" WriteControl="UKMF" EFType="3" bInit="0" nCount="0" ResSpace="0" />
+                <EF05 P1="1" Tag="01" Len="10" Val="FF" rType="cn" remark="卡识别码" />
+                <EF05 P1="2" Tag="02" Len="01" Val="CON14" rType="an" remark="卡的类别" />
+                <EF05 P1="3" Tag="03" Len="04" Val="CON15" rType="an" remark="规范版本" />
+                <EF05 P1="4" Tag="04" Len="0C" Val="CON16" rType="cn" remark="初始化机构编号" />
+                <EF05 P1="5" Tag="05" Len="04" Val="CON17" rType="cn" remark="发卡日期" />
+                <EF05 P1="6" Tag="06" Len="04" Val="CON18" rType="cn" remark="卡有效期" />
+                <EF05 P1="7" Tag="07" Len="09" Val="CON19" rType="an" remark="卡号" />
+                <EF06 P1="1" Tag="08" Len="12" Val="CON21" rType="an" remark="社会保障号码" />
+                <EF06 P1="2" Tag="09" Len="1E" Val="CON22" rType="an" remark="持卡人姓名" />
+                <EF06 P1="3" Tag="4E" Len="14" Val="00" rType="an" remark="" />
+                <EF06 P1="4" Tag="0A" Len="01" Val="CON23" rType="an" remark="姓名扩展" />
+                <EF06 P1="5" Tag="0B" Len="01" Val="CON24" rType="cn" remark="性别" />
+                <EF06 P1="6" Tag="0C" Len="03" Val="CON26" rType="cn" remark="民族" />
+                <EF06 P1="7" Tag="0D" Len="04" Val="CON25" rType="cn" remark="出生地" />
+                <EF07 P1="1" Tag="-" Len="300" Val="00" rType="b" remark="" />
+                <EF08 P1="1" Tag="" Len="1000" Val="00" rType="b" remark="" />
+            </DF00>
+            <!--  MKvalue：主控密钥值		Count：错误计数		UpdateMode1：工作密钥更新使用主控（0：当前MK	1：父目录MK）
+    							UpdateMode2：当前MK更新使用主控（0：当前MK	1：父目录MK）		FID：文件标识符		AID：应用标识符 -->
+            <DF01 MKvalue="11111111111111111111111111111111" Count="66" UpdateMode1="1" UpdateMode2="1" FID="DF01" AID="D15600000500">
+                <EF SFI="EF05" ReadControl="PIN|RK1DF01" WriteControl="UK1DF01" EFType="2" bInit="1" nCount="0" ResSpace="" />
+                <EF SFI="EF06" ReadControl="PIN|RK1DF01" WriteControl="UK4DF01" EFType="2" bInit="1" nCount="0" ResSpace="" />
+                <EF SFI="EF07" ReadControl="PIN|RK1DF01" WriteControl="UK2DF01" EFType="2" bInit="1" nCount="0" ResSpace="" />
+                <EF SFI="EF08" ReadControl="PIN|RK1DF01" WriteControl="UK3DF01" EFType="2" bInit="1" nCount="0" ResSpace="" />
+                <EF SFI="EF09" ReadControl="PIN|RK1DF01" WriteControl="UK2DF01" EFType="2" bInit="1" nCount="0" ResSpace="" />
+                <EF SFI="EF0A" ReadControl="PIN|RK1DF01" WriteControl="UK5DF01" EFType="2" bInit="1" nCount="0" ResSpace="" />
+                <EF SFI="EF15" ReadControl="PIN|RK1DF01" WriteControl="UK6DF01" EFType="2" bInit="1" nCount="0" ResSpace="" />
+                <EF SFI="EF16" ReadControl="" WriteControl="UK7DF01" EFType="3" bInit="0" nCount="0" ResSpace="" />
+                <EF SFI="EF17" ReadControl="" WriteControl="UK8DF01" EFType="3" bInit="0" nCount="0" ResSpace="" />
+                <EF SFI="EF18" ReadControl="" WriteControl="UK9DF01" EFType="3" bInit="0" nCount="0" ResSpace="" />
+                <EF SFI="EF19" ReadControl="" WriteControl="UKADF01" EFType="3" bInit="0" nCount="0" ResSpace="" />
+                <EF SFI="EF1A" ReadControl="" WriteControl="UKBDF01" EFType="3" bInit="0" nCount="0" ResSpace="" />
+                <EF05 P1="1" Tag="20" Len="02" Val="00" rType="an" />
+                <EF05 P1="2" Tag="21" Len="50" Val="00" rType="an" />
+                <EF05 P1="3" Tag="0E" Len="03" Val="FF" rType="cn" />
+                <EF06 P1="1" Tag="23" Len="50" Val="00" rType="an" />
+                <EF06 P1="2" Tag="24" Len="03" Val="FF" rType="cn" />
+                <EF06 P1="3" Tag="28" Len="0F" Val="00" rType="an" />
+                <EF06 P1="4" Tag="2C" Len="32" Val="00" rType="an" />
+                <EF06 P1="5" Tag="2D" Len="0F" Val="00" rType="an" />
+                <EF07 P1="1" Tag="29" Len="01" Val="00" rType="an" />
+                <EF08 P1="1" Tag="2B" Len="01" Val="00" rType="an" />
+                <EF09 P1="1" Tag="2E" Len="46" Val="CON26" rType="an" />
+                <EF09 P1="2" Tag="30" Len="09" Val="00" rType="an" />
+                <EF09 P1="3" Tag="32" Len="02" Val="00" rType="an" />
+                <EF0A P1="1" Tag="37" Len="03" Val="00" rType="an" />
+                <EF0A P1="2" Tag="38" Len="02" Val="00" rType="an" />
+                <EF0A P1="3" Tag="39" Len="04" Val="FF" rType="cn" />
+                <EF15 P1="1" Tag="2A" Len="01" Val="FF" rType="cn" />
+                <EF15 P1="2" Tag="40" Len="34" Val="" rType="B-TLV" />
+                <EF15 P1="3" Tag="40" Len="34" Val="" rType="B-TLV" />
+                <EF15 P1="4" Tag="40" Len="34" Val="" rType="B-TLV" />
+                <EF16 P1="1" Tag="-" Len="128" Val="00" rType="b" />
+                <EF17 P1="1" Tag="" Len="128" Val="00" rType="b" />
+                <EF18 P1="1" Tag="" Len="128" Val="00" rType="b" />
+                <EF19 P1="1" Tag="" Len="128" Val="00" rType="b" />
+                <EF1A P1="1" Tag="" Len="128" Val="00" rType="b" />
+                <!-- BTLV数据 Tag：标识		Len：长度		Val：值		rType：类型(an,cn,b)-->
+                <Tag40 Tag="57" Len="03" Val="00" rType="an" />
+                <Tag40 Tag="58" Len="03" Val="FF" rType="cn" />
+                <Tag40 Tag="59" Len="28" Val="00" rType="an" />
+            </DF01>
+            <DF02 MKvalue="11111111111111111111111111111111" Count="66" UpdateMode1="1" UpdateMode2="1" FID="DF02" AID="D15600000501">
+                <EF SFI="EF05" ReadControl="PIN|RK1DF02" WriteControl="UK1DF02" EFType="2" bInit="1" nCount="0" ResSpace="" />
+                <EF SFI="EF06" ReadControl="PIN|RK1DF02" WriteControl="UK2DF02" EFType="2" bInit="1" nCount="0" ResSpace="" />
+                <EF SFI="EF07" ReadControl="PIN|RK1DF02" WriteControl="UK3DF02" EFType="4" bInit="1" nCount="4" ResSpace="" />
+                <EF SFI="EF09" ReadControl="PIN|RK1DF02" WriteControl="UK4DF02" EFType="2" bInit="1" nCount="0" ResSpace="" />
+                <EF SFI="EF15" ReadControl="PIN|RK1DF02" WriteControl="UK5DF02" EFType="2" bInit="1" nCount="0" ResSpace="" />
+                <EF SFI="EF16" ReadControl="PIN|RK1DF02" WriteControl="UK6DF02" EFType="4" bInit="1" nCount="4" ResSpace="" />
+                <EF05 P1="1" Tag="42" Len="03" Val="00" rType="an" />
+                <EF05 P1="2" Tag="41" Len="03" Val="00" rType="an" />
+                <EF05 P1="3" Tag="43" Len="6C" Val="" rType="B-TLV" />
+                <EF05 P1="4" Tag="43" Len="6C" Val="" rType="B-TLV" />
+                <EF05 P1="5" Tag="44" Len="65" Val="" rType="B-TLV" />
+                <EF05 P1="6" Tag="44" Len="65" Val="" rType="B-TLV" />
+                <EF06 P1="1" Tag="4C" Len="04" Val="FF" rType="cn" />
+                <EF06 P1="2" Tag="4B" Len="05" Val="00" rType="an" />
+                <EF06 P1="3" Tag="4D" Len="03" Val="FF" rType="cn" />
+                <EF06 P1="4" Tag="60" Len="04" Val="FF" rType="cn" />
+                <EF06 P1="5" Tag="4F" Len="06" Val="00" rType="an" />
+                <EF06 P1="6" Tag="50" Len="03" Val="FF" rType="cn" />
+                <EF06 P1="7" Tag="3A" Len="07" Val="00" rType="an" />
+                <EF07 P1="1" Tag="-" Len="07" Val="00" rType="an" />
+                <EF07 P1="2" Tag="-" Len="04" Val="FF" rType="cn" />
+                <EF07 P1="3" Tag="-" Len="04" Val="FF" rType="cn" />
+                <EF07 P1="4" Tag="-" Len="46" Val="00" rType="an" />
+                <EF09 P1="1" Tag="55" Len="10" Val="00" rType="an" />
+                <EF09 P1="2" Tag="56" Len="46" Val="00" rType="an" />
+                <EF09 P1="3" Tag="96" Len="04" Val="FF" rType="cn" />
+                <EF09 P1="4" Tag="97" Len="03" Val="FF" rType="cn" />
+                <EF15 P1="1" Tag="99" Len="10" Val="" rType="B-TLV" />
+                <EF15 P1="2" Tag="99" Len="10" Val="" rType="B-TLV" />
+                <EF15 P1="3" Tag="99" Len="10" Val="" rType="B-TLV" />
+                <EF15 P1="4" Tag="99" Len="10" Val="" rType="B-TLV" />
+                <EF15 P1="5" Tag="0F" Len="04" Val="FF" rType="cn" />
+                <EF15 P1="6" Tag="1F" Len="03" Val="FF" rType="cn" />
+                <EF16 P1="1" Tag="-" Len="03" Val="00" rType="an" />
+                <EF16 P1="2" Tag="-" Len="04" Val="FF" rType="cn" />
+                <EF16 P1="3" Tag="-" Len="04" Val="FF" rType="cn" />
+                <EF16 P1="4" Tag="-" Len="04" Val="FF" rType="cn" />
+                <EF16 P1="5" Tag="-" Len="03" Val="FF" rType="cn" />
+                <Tag43 Tag="5A" Len="07" Val="00" rType="an" />
+                <Tag43 Tag="5B" Len="01" Val="00" rType="an" />
+                <Tag43 Tag="5C" Len="46" Val="00" rType="an" />
+                <Tag43 Tag="5D" Len="04" Val="FF" rType="cn" />
+                <Tag43 Tag="5E" Len="10" Val="00" rType="an" />
+                <Tag44 Tag="33" Len="03" Val="00" rType="an" />
+                <Tag44 Tag="34" Len="46" Val="00" rType="an" />
+                <Tag44 Tag="35" Len="04" Val="FF" rType="cn" />
+                <Tag44 Tag="36" Len="10" Val="00" rType="an" />
+                <Tag99 Tag="10" Len="03" Val="00" rType="an" />
+                <Tag99 Tag="11" Len="04" Val="FF" rType="cn" />
+                <Tag99 Tag="12" Len="03" Val="FF" rType="cn" />
+            </DF02>
+            <DF03 MKvalue="11111111111111111111111111111111" Count="66" UpdateMode1="1" UpdateMode2="1" FID="DF03" AID="D15600000502">
+                <EF SFI="EF05" ReadControl="PIN|RK2DF03" WriteControl="UK1DF03" EFType="2" bInit="1" nCount="0" ResSpace="" />
+                <EF SFI="EF07" ReadControl="PIN|RK1DF03" WriteControl="UK3DF03" EFType="2" bInit="1" nCount="0" ResSpace="" />
+                <EF SFI="EF15" ReadControl="PIN|RK1DF03" WriteControl="UK4DF03" EFType="2" bInit="1" nCount="0" ResSpace="" />
+                <EF SFI="EF16" ReadControl="PIN|RK1DF03" WriteControl="UK5DF03" EFType="2" bInit="1" nCount="0" ResSpace="" />
+                <EF SFI="EF17" ReadControl="PIN|RK1DF03" WriteControl="UK6DF03" EFType="2" bInit="1" nCount="0" ResSpace="" />
+                <EF SFI="EF18" ReadControl="PIN|RK1DF03" WriteControl="UK7DF03" EFType="2" bInit="1" nCount="0" ResSpace="" />
+                <EF SFI="EF19" ReadControl="PIN|RK1DF03" WriteControl="UK8DF03" EFType="1" bInit="1" nCount="0" ResSpace="" />
+                <EF SFI="EF06" ReadControl="PIN|RK1DF03" WriteControl="UK2DF03" EFType="2" bInit="1" nCount="" ResSpace="" />
+                <EF05 P1="1" Tag="61" Len="03" Val="FF" rType="cn" />
+                <EF05 P1="2" Tag="98" Len="04" Val="FF" rType="cn" />
+                <EF05 P1="3" Tag="62" Len="04" Val="FF" rType="cn" />
+                <EF05 P1="4" Tag="63" Len="03" Val="00" rType="an" />
+                <EF05 P1="5" Tag="64" Len="03" Val="00" rType="an" />
+                <EF05 P1="6" Tag="65" Len="03" Val="00" rType="an" />
+                <EF05 P1="7" Tag="66" Len="03" Val="00" rType="an" />
+            
+                <EF07 P1="1" Tag="70" Len="03" Val="00" rType="an" />
+                <EF07 P1="2" Tag="71" Len="03" Val="FF" rType="cn" />
+                <EF07 P1="3" Tag="6E" Len="04" Val="FF" rType="cn" />
+                <EF07 P1="4" Tag="6C" Len="04" Val="FF" rType="cn" />
+                <EF07 P1="5" Tag="6F" Len="04" Val="FF" rType="cn" />
+                <EF07 P1="6" Tag="73" Len="04" Val="FF" rType="cn" />
+                <EF15 P1="1" Tag="7A" Len="03" Val="FF" rType="cn" />
+                <EF15 P1="2" Tag="7B" Len="04" Val="FF" rType="cn" />
+                <EF15 P1="3" Tag="7C" Len="04" Val="FF" rType="cn" />
+                <EF16 P1="1" Tag="51" Len="03" Val="FF" rType="cn" />
+                <EF16 P1="2" Tag="5F" Len="01" Val="00" rType="an" />
+                <EF17 P1="1" Tag="3B" Len="14" Val="00" rType="an" />
+                <EF17 P1="2" Tag="3C" Len="46" Val="00" rType="an" />
+                <EF17 P1="3" Tag="3D" Len="01" Val="00" rType="an" />
+                <EF17 P1="4" Tag="3E" Len="04" Val="FF" rType="cn" />
+                <EF17 P1="5" Tag="3F" Len="3C" Val="00" rType="an" />
+                <EF18 P1="1" Tag="74" Len="03" Val="00" rType="an" />
+                <EF18 P1="2" Tag="75" Len="03" Val="FF" rType="cn" />
+                <EF18 P1="3" Tag="76" Len="01" Val="FF" rType="cn" />
+                <EF18 P1="4" Tag="77" Len="04" Val="FF" rType="cn" />
+                <EF18 P1="5" Tag="78" Len="04" Val="FF" rType="cn" />
+                <EF19 P1="1" Tag="79" Len="27" Val="" rType="B-TLV" />
+                <EF19 P1="2" Tag="79" Len="27" Val="" rType="B-TLV" />
+                <EF19 P1="3" Tag="79" Len="27" Val="" rType="B-TLV" />
+                <EF19 P1="4" Tag="79" Len="27" Val="" rType="B-TLV" />
+                <EF06 P1="1" Tag="45" Len="14" Val="00" rType="an" />
+                <EF06 P1="2" Tag="46" Len="02" Val="00" rType="an" />
+                <EF06 P1="3" Tag="47" Len="02" Val="00" rType="an" />
+                <EF06 P1="4" Tag="48" Len="01" Val="00" rType="an" />
+                <EF06 P1="5" Tag="49" Len="01" Val="00" rType="an" />
+                <EF06 P1="6" Tag="67" Len="04" Val="FF" rType="cn" />
+                <EF06 P1="7" Tag="6B" Len="3C" Val="00" rType="an" />
+                <EF06 P1="8" Tag="4A" Len="61" Val="" rType="B-TLV" />
+                <EF06 P1="9" Tag="4A" Len="61" Val="" rType="B-TLV" />
+                <EF06 P1="A" Tag="4A" Len="61" Val="" rType="B-TLV" />
+                <Tag4A Tag="13" Len="02" Val="00" rType="an" />
+                <Tag4A Tag="14" Len="01" Val="00" rType="an" />
+                <Tag4A Tag="15" Len="14" Val="00" rType="an" />
+                <Tag4A Tag="16" Len="04" Val="FF" rType="cn" />
+                <Tag4A Tag="17" Len="3C" Val="00" rType="an" />
+                <Tag79 Tag="18" Len="03" Val="00" rType="an" />
+                <Tag79 Tag="19" Len="03" Val="FF" rType="cn" />
+                <Tag79 Tag="1A" Len="04" Val="FF" rType="cn" />
+                <Tag79 Tag="1B" Len="04" Val="FF" rType="cn" />
+                <Tag79 Tag="1C" Len="04" Val="FF" rType="cn" />
+                <Tag79 Tag="1D" Len="03" Val="00" rType="an" />
+                <Tag79 Tag="1E" Len="04" Val="FF" rType="cn" />
+            </DF03>
+            <DF04 MKvalue="11111111111111111111111111111111" Count="66" UpdateMode1="1" UpdateMode2="1" FID="DF04" AID="D15600000503">
+                <EF SFI="EF05" ReadControl="PIN|RK1DF04" WriteControl="UK1DF04" EFType="2" bInit="1" nCount="0" ResSpace="" />
+                <EF SFI="EF06" ReadControl="PIN+RK1DF04" WriteControl="UK2DF04" EFType="2" bInit="1" nCount="0" ResSpace="" />
+                <EF SFI="EF08" ReadControl="PIN" WriteControl="FF" EFType="4" bInit="1" nCount="30" ResSpace="" />
+                <EF SFI="EF15" ReadControl="PIN|RK1DF04" WriteControl="UK2DF04" EFType="4" bInit="1" nCount="8" ResSpace="" />
+                <EF05 P1="1" Tag="81" Len="08" Val="00" rType="an" />
+                <EF05 P1="2" Tag="84" Len="03" Val="FF" rType="cn" />
+                <EF05 P1="3" Tag="87" Len="11" Val="00" rType="an" />
+                <EF05 P1="4" Tag="8C" Len="01" Val="FF" rType="cn" />
+                <EF05 P1="5" Tag="80" Len="04" Val="FF" rType="cn" />
+                <EF05 P1="6" Tag="8B" Len="1D" Val="00" rType="an" />
+                <EF05 P1="7" Tag="8A" Len="0F" Val="00" rType="an" />
+                <EF05 P1="8" Tag="83" Len="09" Val="00" rType="an" />
+                <EF05 P1="9" Tag="86" Len="09" Val="00" rType="an" />
+                <EF05 P1="A" Tag="89" Len="09" Val="00" rType="an" />
+                <EF05 P1="B" Tag="7D" Len="09" Val="00" rType="an" />
+                <EF05 P1="C" Tag="7E" Len="09" Val="00" rType="an" />
+                <EF05 P1="D" Tag="7F" Len="09" Val="00" rType="an" />
+                <EF05 P1="E" Tag="8D" Len="09" Val="00" rType="an" />
+                <EF05 P1="F" Tag="8E" Len="09" Val="00" rType="an" />
+                <EF05 P1="10" Tag="8F" Len="01" Val="00" rType="an" />
+                <EF06 P1="1" Tag="90" Len="01" Val="00" rType="an" />
+                <EF06 P1="2" Tag="92" Len="04" Val="FF" rType="cn" />
+                <EF06 P1="3" Tag="93" Len="02" Val="00" rType="an" />
+                <EF08 P1="1" Tag="-" Len="02" Val="00" rType="b" />
+                <EF08 P1="2" Tag="-" Len="01" Val="00" rType="an" />
+                <EF08 P1="3" Tag="-" Len="06" Val="FF" rType="cn" />
+                <EF08 P1="4" Tag="-" Len="07" Val="FF" rType="cn" />
+                <EF08 P1="5" Tag="-" Len="04" Val="00" rType="b" />
+                <EF08 P1="6" Tag="-" Len="04" Val="00" rType="b" />
+                <EF08 P1="7" Tag="-" Len="04" Val="00" rType="b" />
+                <EF15 P1="1" Tag="-" Len="02" Val="00" rType="b" />
+                <EF15 P1="2" Tag="-" Len="01" Val="00" rType="an" />
+            </DF04>
+            <DF07 MKvalue="11111111111111111111111111111111" Count="66" UpdateMode1="0" UpdateMode2="0" FID="DF07" AID="D15600000504">
+                <EF SFI="EF05" ReadControl="RK1DF07" WriteControl="UK1DF07" EFType="2" bInit="1" nCount="0" ResSpace="0" />
+                <EF SFI="EF06" ReadControl="RK2DF07" WriteControl="UK2DF07" EFType="2" bInit="1" nCount="0" ResSpace="0" />
+                <EF SFI="EF07" ReadControl="RK3DF07" WriteControl="UK3DF07" EFType="2" bInit="1" nCount="0" ResSpace="0" />
+                <EF05 P1="1" Tag="F0" Len="02" Val="00" rType="an" />
+                <EF05 P1="2" Tag="F1" Len="01" Val="00" rType="an" />
+                <EF05 P1="3" Tag="F2" Len="04" Val="FF" rType="cn" />
+                <EF05 P1="4" Tag="F3" Len="03" Val="00" rType="an" />
+                <EF05 P1="5" Tag="F4" Len="04" Val="FF" rType="cn" />
+                <EF06 P1="1" Tag="F5" Len="03" Val="00" rType="an" />
+                <EF06 P1="2" Tag="F6" Len="04" Val="FF" rType="cn" />
+                <EF06 P1="3" Tag="F7" Len="46" Val="00" rType="an" />
+                <EF07 P1="1" Tag="F8" Len="04" Val="FF" rType="cn" />
+                <EF07 P1="2" Tag="F9" Len="01" Val="00" rType="an" />
+            </DF07>
+            <DF05 MKvalue="11111111111111111111111111111111" Count="66" UpdateMode1="0" UpdateMode2="0" FID="DF05" AID="D15600000505">
+                <EF SFI="EF05" ReadControl="" WriteControl="UK1DF05" EFType="2" bInit="1" nCount="0" ResSpace="0" />
+                <EF05 P1="1" Tag="A0" Len="01" Val="00" rType="an" />
+                <EF05 P1="2" Tag="A1" Len="01" Val="00" rType="an" />
+                <EF05 P1="3" Tag="B9" Len="01" Val="00" rType="an" />
+                <EF05 P1="4" Tag="A2" Len="04" Val="00" rType="an" />
+                <EF05 P1="5" Tag="A9" Len="01" Val="FF" rType="cn" />
+                <EF05 P1="6" Tag="A3" Len="18" Val="" rType="B-TLV" />
+                <EF05 P1="7" Tag="A3" Len="18" Val="" rType="B-TLV" />
+                <EF05 P1="8" Tag="A3" Len="18" Val="" rType="B-TLV" />
+                <EF05 P1="9" Tag="A3" Len="18" Val="" rType="B-TLV" />
+                <EF05 P1="A" Tag="A3" Len="18" Val="" rType="B-TLV" />
+                <EF05 P1="B" Tag="A4" Len="17" Val="" rType="B-TLV" />
+                <EF05 P1="C" Tag="A4" Len="17" Val="" rType="B-TLV" />
+                <EF05 P1="D" Tag="A4" Len="17" Val="" rType="B-TLV" />
+                <EF05 P1="E" Tag="A4" Len="17" Val="" rType="B-TLV" />
+                <EF05 P1="F" Tag="A4" Len="17" Val="" rType="B-TLV" />
+                <EF05 P1="10" Tag="BA" Len="14" Val="00" rType="an" />
+                <EF05 P1="11" Tag="BB" Len="64" Val="00" rType="an" />
+                <EF05 P1="12" Tag="AA" Len="14" Val="00" rType="an" />
+                <EF05 P1="13" Tag="AB" Len="04" Val="ff" rType="cn" />
+                <EF05 P1="14" Tag="AC" Len="01" Val="00" rType="an" />
+                <EF05 P1="15" Tag="AD" Len="01" Val="00" rType="an" />
+                <EF05 P1="16" Tag="AE" Len="01" Val="00" rType="an" />
+                <EF05 P1="17" Tag="AF" Len="01" Val="00" rType="an" />
+                <EF05 P1="18" Tag="B0" Len="01" Val="00" rType="an" />
+                <EF05 P1="19" Tag="B1" Len="01" Val="00" rType="an" />
+                <EF05 P1="1A" Tag="B2" Len="01" Val="00" rType="an" />
+                <EF05 P1="1B" Tag="B3" Len="01" Val="00" rType="an" />
+                <EF05 P1="1C" Tag="B4" Len="01" Val="00" rType="an" />
+                <EF05 P1="1D" Tag="B5" Len="01" Val="00" rType="an" />
+                <EF05 P1="1E" Tag="B6" Len="01" Val="00" rType="an" />
+                <EF05 P1="1F" Tag="B7" Len="01" Val="00" rType="an" />
+                <EF05 P1="20" Tag="BC" Len="01" Val="00" rType="an" />
+                <EF05 P1="21" Tag="B8" Len="28" Val="00" rType="an" />
+                <TagA3 Tag="A5" Len="10" Val="00" rType="an" />
+                <TagA3 Tag="A6" Len="04" Val="00" rType="an" />
+                <TagA4 Tag="A7" Len="10" Val="00" rType="an" />
+                <TagA4 Tag="A8" Len="03" Val="00" rType="an" />
+            </DF05>
+            <DF06 MKvalue="11111111111111111111111111111111" Count="66" UpdateMode1="0" UpdateMode2="0" FID="DF06" AID="D15600000506">
+                <EF SFI="EF05" ReadControl="RK1DF06" WriteControl="UK1DF06" EFType="2" bInit="1" nCount="0" ResSpace="0" />
+                <EF SFI="EF06" ReadControl="RK1DF06" WriteControl="UK2DF06" EFType="2" bInit="1" nCount="0" ResSpace="0" />
+                <EF05 P1="1" Tag="C0" Len="46" Val="00" rType="an" />
+                <EF05 P1="2" Tag="C2" Len="09" Val="00" rType="an" />
+                <EF05 P1="3" Tag="C3" Len="1A" Val="" rType="B-TLV" />
+                <EF05 P1="4" Tag="C4" Len="1A" Val="" rType="B-TLV" />
+                <EF05 P1="5" Tag="C5" Len="1A" Val="" rType="B-TLV" />
+                <EF06 P1="1" Tag="C6" Len="46" Val="00" rType="an" />
+                <EF06 P1="2" Tag="C8" Len="09" Val="00" rType="an" />
+                <EF06 P1="3" Tag="C9" Len="01" Val="FF" rType="cn" />
+                <EF06 P1="4" Tag="CA" Len="04" Val="FF" rType="cn" />
+                <EF06 P1="5" Tag="CB" Len="04" Val="FF" rType="cn" />
+                <EF06 P1="6" Tag="CC" Len="04" Val="FF" rType="cn" />
+                <EF06 P1="7" Tag="CD" Len="02" Val="FF" rType="cn" />
+                <EF06 P1="8" Tag="CE" Len="01" Val="FF" rType="cn" />
+                <EF06 P1="9" Tag="CF" Len="04" Val="FF" rType="cn" />
+                <EF06 P1="A" Tag="D0" Len="04" Val="FF" rType="cn" />
+                <EF06 P1="B" Tag="D1" Len="04" Val="FF" rType="cn" />
+                <EF06 P1="C" Tag="D2" Len="03" Val="FF" rType="cn" />
+                <EF06 P1="D" Tag="D3" Len="01" Val="FF" rType="cn" />
+                <EF06 P1="E" Tag="D4" Len="04" Val="FF" rType="cn" />
+                <EF06 P1="F" Tag="D5" Len="04" Val="FF" rType="cn" />
+                <EF06 P1="10" Tag="D6" Len="04" Val="FF" rType="cn" />
+                <EF06 P1="11" Tag="D7" Len="03" Val="FF" rType="cn" />
+                <EF06 P1="12" Tag="D8" Len="01" Val="FF" rType="cn" />
+                <EF06 P1="13" Tag="D9" Len="04" Val="FF" rType="cn" />
+                <EF06 P1="14" Tag="DA" Len="04" Val="FF" rType="cn" />
+                <EF06 P1="15" Tag="DB" Len="04" Val="FF" rType="cn" />
+                <EF06 P1="16" Tag="DC" Len="04" Val="FF" rType="cn" />
+                <EF06 P1="17" Tag="DD" Len="04" Val="FF" rType="cn" />
+                <EF06 P1="18" Tag="DE" Len="04" Val="FF" rType="cn" />
+                <EF06 P1="19" Tag="DF" Len="03" Val="FF" rType="cn" />
+                <EF06 P1="1A" Tag="E0" Len="03" Val="FF" rType="cn" />
+                <EF06 P1="1B" Tag="E1" Len="02" Val="FF" rType="cn" />
+                <EF06 P1="1C" Tag="E2" Len="02" Val="FF" rType="cn" />
+                <TagC3 Tag="E3" Len="01" Val="FF" rType="cn" />
+                <TagC3 Tag="E4" Len="04" Val="FF" rType="cn" />
+                <TagC3 Tag="E5" Len="04" Val="FF" rType="cn" />
+                <TagC3 Tag="E6" Len="04" Val="FF" rType="cn" />
+                <TagC3 Tag="E7" Len="03" Val="FF" rType="cn" />
+                <TagC4 Tag="E3" Len="01" Val="FF" rType="cn" />
+                <TagC4 Tag="E4" Len="04" Val="FF" rType="cn" />
+                <TagC4 Tag="E5" Len="04" Val="FF" rType="cn" />
+                <TagC4 Tag="E6" Len="04" Val="FF" rType="cn" />
+                <TagC4 Tag="E7" Len="03" Val="FF" rType="cn" />
+                <TagC5 Tag="E3" Len="01" Val="FF" rType="cn" />
+                <TagC5 Tag="E4" Len="04" Val="FF" rType="cn" />
+                <TagC5 Tag="E5" Len="04" Val="FF" rType="cn" />
+                <TagC5 Tag="E6" Len="04" Val="FF" rType="cn" />
+                <TagC5 Tag="E7" Len="03" Val="FF" rType="cn" />
+            </DF06>
+        </SSSE>
+    </MF>
+</INFO>
